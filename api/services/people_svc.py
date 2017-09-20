@@ -1,6 +1,8 @@
 
 from requests import Session, Request
 
+from ..models import Person
+
 
 class PeopleSvc(object):
     """
@@ -24,4 +26,4 @@ class PeopleSvc(object):
         prepped = self.session.prepare_request(req)
         response = self.session.send(prepped)
         self.history.append(response)
-        return response
+        return Person(response)

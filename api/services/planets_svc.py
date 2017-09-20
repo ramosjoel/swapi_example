@@ -3,7 +3,7 @@ from requests import Request, Session
 class PlanetsSvc(object):
 
     def __init__(self):
-        self.base_url = 'https://swapi.co//api/planets'
+        self.base_url = 'https://swapi.co/api/planets'
         self.session = Session()
         self.history = []
 
