@@ -9,7 +9,12 @@ def svc():
 
 
 def test_get_person(svc):
-    response = svc.get_person(1)
+    person = svc.get_person(1)
+    response = svc.history[-1]
     assert response.ok
     assert response.status_code == 200
     assert response.json()['name'] == "Luke Skywalker"
+    assert response.name == 'Luke Skywalker'
+    assert person.birth_year == '19BBY'
+
+

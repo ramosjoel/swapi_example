@@ -1,4 +1,4 @@
 
-from .people_svc import PeopleSvc
+from api.services import PeopleSvc, PlanetsSvc
 
-__all__ = [PeopleSvc]
+__all__ = [PeopleSvc, PlanetsSvc]
